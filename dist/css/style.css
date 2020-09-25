@@ -33,6 +33,55 @@ input, textarea, select, button {
   border: 1px solid #666666;
 }
 
+input, label {
+  display: inline-block;
+}
+
+input[placeholder]::-webkit-input-placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+input[placeholder]::-moz-placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+input[placeholder]:-ms-input-placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+input[placeholder]::-ms-input-placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+input[placeholder]::placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+input[placeholder]:-moz-placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+input[placeholder]::-moz-placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+input[placeholder]:-ms-input-placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
+input[placeholder]::-webkit-input-placeholder {
+  color: #666666;
+  opacity: 1;
+}
+
 ul, ol {
   padding: 5px;
 }
@@ -64,13 +113,16 @@ a:hover {
 
 hr {
   border: none;
-  outline: none;
-  opacity: 0.5;
   border-bottom: 1px solid #666666;
+  outline: none;
+  opacity: .5;
 }
 
 img {
   display: block;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, .p {
@@ -132,15 +184,6 @@ body {
   overflow-y: visible;
 }
 
-.container {
-  width: 100%;
-  max-width: 1070px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 .navbar {
   display: -webkit-box;
   display: -webkit-flex;
@@ -157,10 +200,20 @@ body {
 }
 
 .lazy {
+  height: 400px;
   background-size: cover;
   background-color: none;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 body {
