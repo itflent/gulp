@@ -1,5 +1,5 @@
 # How You Can Use This Template
 
-if you use this template thirst time: npm run global
+If you use this template thirst time: npm run global
 
-next time: npm run link
+Next time: npm run link
