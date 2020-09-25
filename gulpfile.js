@@ -15,8 +15,6 @@ const
   prettyHTML = require('gulp-pretty-html'),
   rename = require('gulp-rename'),
   minifierCSS = require('gulp-clean-css'),
-  minifierJS = require('gulp-uglify'),
-  babel = require('gulp-babel'),
   plumber = require('gulp-plumber'),
   imagemin = require('gulp-imagemin'),
   browserSync = require('browser-sync');
@@ -55,13 +53,8 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
   return gulp.src(`${paths.app}/js/**/*.js`)
     .pipe(browserSync.reload( {stream: true} ))
-    .pipe(babel( {presets: ['env']} ))
     // ! First File (__name.js) Expanded
-    .pipe(rename( {basename: 'script', suffix: '', extname: '.js'} ))
-    .pipe(gulp.dest(`${paths.dist}/js`))
-    // ! Second File (__name.min.js) Minifier
-    .pipe(minifierJS())
-    .pipe(rename( {basename: 'script', suffix: '.min', extname: '.js'} ))
+    .pipe(rename( {suffix: '', extname: '.js'} ) )
     .pipe(gulp.dest(`${paths.dist}/js`))
 })
 

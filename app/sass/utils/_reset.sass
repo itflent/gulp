@@ -18,6 +18,14 @@ input, textarea, select, button
   border: none
   border: 1px solid $reset--color-1
 
+input, label
+  display: inline-block
+
+input[placeholder]
+  +placeholders
+    color: $reset--color-1
+    opacity: 1
+
 ul, ol
   padding: 5px
 
@@ -40,12 +48,14 @@ a
 
 hr
   border: none
-  outline: none
-  opacity: 0.5
   border-bottom: 1px solid $reset--color-1
+  outline: none
+  opacity: .5
 
 img
   display: block
+  max-width: 100%
+  object-fit: cover
 
 // ! Typography
 @import ./_typo
