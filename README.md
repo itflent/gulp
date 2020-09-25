@@ -1,2 +1,4 @@
-# Gulp Template For Develop
-// Template For Quick Start - gulp
+# How You Can Use This Template
+
+if you use this template thirst time: npm run global
+next time: npm run link 
